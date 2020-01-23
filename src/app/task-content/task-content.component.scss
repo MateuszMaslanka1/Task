@@ -1,0 +1,24 @@
+.border-for-task {
+  border: 1px solid red;
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  .container-1 {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-2 {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-3 {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+  }
+}

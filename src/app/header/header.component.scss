@@ -1,0 +1,22 @@
+.header-border {
+  width: 100%;
+  height: 5rem;
+  background-color: dodgerblue;
+  border-bottom: 2px solid;
+  display: flex;
+  align-items: center;
+  .border-for-title  {
+    width: 15rem;
+    height: 2.5rem;
+    background-color: lightsteelblue;
+    margin-left: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+  }
+}
