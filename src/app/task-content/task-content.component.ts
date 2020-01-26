@@ -9,6 +9,9 @@ export class TaskContentComponent implements OnInit {
 
   constructor() { }
 
+  isHidden = true;
+
+
   ngOnInit() {
   }
 

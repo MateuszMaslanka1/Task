@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SetCurrentTaskService} from '../set-current-task.service';
 
 @Component({
   selector: 'app-add-task',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTaskComponent implements OnInit {
 
-  constructor() { }
+  constructor(private setCurrentTaskService: SetCurrentTaskService) { }
 
   ngOnInit() {
+  }
+
+  addTask() {
+    this.setCurrentTaskService.addTask();
   }
 
 }
