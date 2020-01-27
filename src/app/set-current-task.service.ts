@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {ElementRef, Injectable, QueryList} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,8 +6,19 @@ import { Injectable } from '@angular/core';
 export class SetCurrentTaskService {
 
   constructor() { }
+  private getContainer: QueryList<ElementRef>;
 
   addTask() {
-    console.log();
+    let counter = 0;
+    this.getContainer.forEach((div: ElementRef) => {
+      if (div.nativeElement.hidden && counter === 0) {
+        div.nativeElement.hidden = false;
+        counter = 1;
+      }
+    });
+  }
+
+  getInideContainer(getContainer: QueryList<ElementRef>) {
+    this.getContainer = getContainer;
   }
 }
