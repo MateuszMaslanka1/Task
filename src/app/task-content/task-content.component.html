@@ -5,7 +5,14 @@
     <div class="top-level-1-third">third</div>
   </div>
   <div [className]="'container-second'">
-    <div class="inside-container-{{j}}" [hidden]="true" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12]; let j = index" #getContainer></div>
+    <div class="inside-container-{{j}}" [hidden]="true" *ngFor="let i of this.setCurrentTaskService.getInfoAboutQuantityOfTask(); let j = index" #getContainer>
+      <button (click)="removeTask($event)">delete</button>
+      <button (click)="addTaskName(j)">dodaj nazwę zadania</button>
+      <ul>
+        {{j}}
+        <li class="describe-task-{{k}}"*ngFor="let i of objForQuantityNameTask[j]; let k = index"></li>
+      </ul>
+    </div>
   </div>
 
   <div [className]="'container-third'">

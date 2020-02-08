@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { TaskContentComponent } from './task-content/task-content.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { ColumnForDataComponent } from './column-for-data/column-for-data.component';
+import { TaskDetailsComponent } from './task-details/task-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ColumnForDataComponent } from './column-for-data/column-for-data.compon
     HeaderComponent,
     TaskContentComponent,
     AddTaskComponent,
-    ColumnForDataComponent
+    ColumnForDataComponent,
+    TaskDetailsComponent
   ],
   imports: [
     BrowserModule,
