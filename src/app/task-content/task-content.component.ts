@@ -12,8 +12,6 @@ export class TaskContentComponent implements AfterViewInit {
 
   isHidden = true;
   getQuantityForTaskName = 0;
-  // quantityOfTaskDetails: Array<number>;
-  // quantityOfTask: Array<number>;
   objForQuantityNameTask = {};
   @ViewChildren('getContainer') getContainer: QueryList<ElementRef>;
 
