@@ -7,7 +7,7 @@ export class SetCurrentTaskService {
 
   constructor() { }
   private getContainer: QueryList<ElementRef>;
-  qunatityOfTaskTab = [1];
+  qunatityOfTaskTab = [];
   addTask() {
     let counter = 0;
     this.getContainer.forEach((div: ElementRef) => {
@@ -23,6 +23,7 @@ export class SetCurrentTaskService {
   }
 
   sendInfoAboutQuantityOfTask(qunatityOfTask: number) {
+    console.log(Array(qunatityOfTask).fill(0).map((x, i) => i));
     this.qunatityOfTaskTab = Array(qunatityOfTask).fill(0).map((x, i) => i);
   }
 }
