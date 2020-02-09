@@ -9,15 +9,15 @@ import {SetCurrentTaskService} from '../set-current-task.service';
 export class AddTaskComponent implements OnInit {
 
   constructor(private setCurrentTaskService: SetCurrentTaskService) { }
+  qunatityOfTask = 1;
 
   ngOnInit() {
   }
 
   addTask() {
-    let qunatityOfTask = 0;
-    qunatityOfTask++;
+    this.qunatityOfTask++;
     this.setCurrentTaskService.addTask();
-    this.setCurrentTaskService.sendInfoAboutQuantityOfTask(qunatityOfTask);
+    this.setCurrentTaskService.sendInfoAboutQuantityOfTask(this.qunatityOfTask);
   }
 
 }

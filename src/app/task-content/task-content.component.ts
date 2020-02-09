@@ -8,28 +8,13 @@ import {SetCurrentTaskService} from '../set-current-task.service';
 })
 export class TaskContentComponent implements AfterViewInit {
 
-  constructor(private setCurrentTaskService: SetCurrentTaskService) {
-    this.quantityOfTask = Array(12).fill(0).map((x, i) => i);
-  }
+  constructor(private setCurrentTaskService: SetCurrentTaskService) {}
 
   isHidden = true;
   getQuantityForTaskName = 0;
   quantityOfTaskDetails: Array<number>;
   quantityOfTask: Array<number>;
-  objForQuantityNameTask = {
-    0: [],
-    1: [],
-    2: [],
-    3: [],
-    4: [],
-    5: [],
-    6: [],
-    7: [],
-    8: [],
-    9: [],
-    10: [],
-    11: []
-  };
+  objForQuantityNameTask = {};
   @ViewChildren('getContainer') getContainer: QueryList<ElementRef>;
 
   ngAfterViewInit() {
@@ -41,6 +26,9 @@ export class TaskContentComponent implements AfterViewInit {
   }
 
   addTaskName(indexOfTask: number) {
+    if (!this.objForQuantityNameTask[indexOfTask]) {
+      this.objForQuantityNameTask[indexOfTask] = [];
+    }
     this.getQuantityForTaskName = this.objForQuantityNameTask[indexOfTask].length;
     this.getQuantityForTaskName++;
     this.objForQuantityNameTask[indexOfTask].push(this.getQuantityForTaskName);

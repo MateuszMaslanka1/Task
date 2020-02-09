@@ -5,7 +5,7 @@
     <div class="top-level-1-third">third</div>
   </div>
   <div [className]="'container-second'">
-    <div class="inside-container-{{j}}" [hidden]="true" *ngFor="let i of this.setCurrentTaskService.getInfoAboutQuantityOfTask(); let j = index" #getContainer>
+    <div class="inside-container-{{j}}" [hidden]="true" *ngFor="let i of this.setCurrentTaskService.qunatityOfTaskTab; let j = index" #getContainer>
       <button (click)="removeTask($event)">delete</button>
       <button (click)="addTaskName(j)">dodaj nazwę zadania</button>
       <ul>
