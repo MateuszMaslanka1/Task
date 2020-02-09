@@ -6,20 +6,6 @@ import {ElementRef, Injectable, QueryList} from '@angular/core';
 export class SetCurrentTaskService {
 
   constructor() { }
-  objForQuantityNameTask = {
-    0: [],
-    1: [],
-    2: [],
-    3: [],
-    4: [],
-    5: [],
-    6: [],
-    7: [],
-    8: [],
-    9: [],
-    10: [],
-    11: []
-  };
   private getContainer: QueryList<ElementRef>;
   qunatityOfTaskTab = [1];
   addTask() {
